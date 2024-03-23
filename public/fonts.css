@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'founders-grotesk-regular';
+  src:
+    url('./fonts/founders-grotesk-regular.otf') format('otf'),
+    url('./fonts/founders-grotesk-regular.woff2') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'founders-grotesk-medium';
+  src:
+    url('./fonts/founders-grotesk-medium.otf') format('otf'),
+    url('./fonts/founders-grotesk-medium.woff2') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'founders-grotesk-bold';
+  src: url('./fonts/founders-grotesk-bold.otf') format('otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'founders-grotesk-mono-regular';
+  src:
+    url('./fonts/founders-grotesk-mono-regular.otf') format('otf'),
+    url('./fonts/founders-grotesk-mono-regular.woff2') format('woff');
+  font-weight: normal;
+}

@@ -1,0 +1,15 @@
+@import './../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import './../../node_modules/bootstrap/scss/bootstrap-grid';
+
+@import './scss/core/generic/gen-colors';
+@import './scss/core/generic/gen-style';
+@import './scss/core/generic/gen-typography';
+
+@import './scss/core/mixins/flex';
+@import './scss/core/mixins/images';
+@import './scss/core/mixins/reset-button';
+@import './scss/core/mixins/z-index';
+
+@import './scss/atomic/components/navigation';
+
+@import './scss/atomic/elements/button';

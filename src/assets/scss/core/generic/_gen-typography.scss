@@ -1,0 +1,54 @@
+// TODO: Update fonts for Header
+
+@mixin h1 {
+  font-family: 'founders-grotesk-regular';
+}
+
+@mixin h2 {
+  font-family: 'founders-grotesk-regular';
+}
+
+@mixin h3 {
+  font-family: 'founders-grotesk-regular';
+}
+
+@mixin h4 {
+  font-family: 'founders-grotesk-regular';
+}
+
+@mixin text--body {
+  font-family: 'founders-grotesk-regular';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+p {
+  @include text--body;
+}
