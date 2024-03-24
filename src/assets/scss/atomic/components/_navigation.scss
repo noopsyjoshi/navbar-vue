@@ -1,5 +1,105 @@
-.nav {
-  background-color: $c-grey-dark;
-  color: $c-white;
-  padding: 4rem 0;
+.navigation {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  height: 10.2rem;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  @include flex-pos(center, flex-start);
+
+  &__wrapper {
+    @include flex-pos(center, space-between);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__menu {
+    background-color: $c-teal;
+    position: fixed;
+    top: 10.2rem;
+    left: 0;
+    width: 100%;
+    padding: 1.8rem;
+    @include flex-pos(flex-start, space-between);
+    flex-direction: column;
+    min-height: calc(100vh - 10.2rem);
+    display: none;
+
+    &.open {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    width: 14.6rem;
+    height: 3.45rem;
+  }
+
+  &__toggles {
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    @include reset-button;
+  }
+
+  &__hamburger {
+    width: 2.4rem;
+    height: 1.8rem;
+
+    .open & {
+      display: none;
+    }
+  }
+
+  &__close {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: none;
+
+    .open & {
+      display: block;
+    }
+  }
+
+  &__primary {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__secondary {
+    display: none;
+  }
+
+  &__item {
+    list-style: none;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid $c-teal-light;
+
+    > button {
+      @include reset-button;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-family: 'founders-grotesk-medium';
+    font-size: 2.4rem;
+    color: $c-white;
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+  }
+
+  &__button {
+    margin-top: auto;
+  }
 }

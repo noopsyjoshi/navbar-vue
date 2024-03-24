@@ -1,2 +1,17 @@
 .button {
+  @include reset-button;
+  background-color: $c-purple;
+  color: $c-white;
+  @include flex-pos;
+  border-radius: 1.8rem;
+  padding: 1.2rem; // TODO: double check spacing in Figma dev
+  min-width: 18.8rem;
+  font-family: 'founders-grotesk-medium';
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+a[type='button'] {
+  text-decoration: none;
+  color: $c-white;
 }

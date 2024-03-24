@@ -1,0 +1,79 @@
+{
+  "component": "navigation",
+  "navPrimaryItems": [
+    {
+      "link": "/",
+      "text": "Platform",
+      "navSecondaryItems": [
+        {
+          "text": "Feedback & Senitment Analysis",
+          "navContent": [
+            {
+              "title": "The Complete Restaurant Experience Monitoring Solution",
+              "body": "Review all Guest experience feedback across all social, review, and survey channels including in-store or off-premises channels.",
+              "mainLinks": [
+                {
+                  "iconUrl": "/",
+                  "iconAlt": " ",
+                  "text": "Survey"
+                },
+                {
+                  "iconUrl": "/",
+                  "iconAlt": " ",
+                  "text": "Social Listening"
+                }
+              ],
+              "capabilities": [
+                {
+                  "text": "Survey & Form Management"
+                },
+                {
+                  "text": "Delivery Service Satisfaction"
+                },
+                {
+                  "text": "Net-Promoted Score (NPS)"
+                },
+                {
+                  "text": "Customer Satisfaction (CSAT)"
+                },
+                {
+                  "text": "Customer Effort (CES)"
+                },
+                {
+                  "text": "Customer Sentiment"
+                },
+                {
+                  "text": "Natural Language Processing"
+                },
+                {
+                  "text": "Social & Review Site Coverage"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Brand Reputation Management"
+        },
+        {
+          "text": "Market Intelligence"
+        },
+        {
+          "text": "Hospitality AI"
+        }
+      ]
+    },
+    {
+      "link": "/",
+      "text": "Resources"
+    },
+    {
+      "link": "/",
+      "text": "About Us"
+    },
+    {
+      "link": "/",
+      "text": "Login"
+    }
+  ]
+}
