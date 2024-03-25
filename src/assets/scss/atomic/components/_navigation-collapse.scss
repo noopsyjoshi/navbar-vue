@@ -1,0 +1,82 @@
+.navigation-collapse {
+  cursor: pointer;
+
+  &__header {
+    font-size: 2rem;
+    color: $c-grey-dark;
+    @include flex-pos(center, flex-start);
+  }
+
+  &__title {
+    font-family: 'founders-grotesk-medium';
+    font-size: 2rem;
+  }
+
+  &__content {
+    padding-top: 1.8rem;
+
+    // RTE
+    h3 {
+      font-family: 'founders-grotesk-medium';
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.2;
+      font-family: 'founders-grotesk-regular';
+    }
+  }
+
+  &__link {
+    @include flex-pos(center, flex-start);
+    margin-top: 1.2rem;
+
+    span {
+      font-size: 1.4rem;
+      font-family: 'founders-grotesk-medium';
+      margin-right: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $c-grey-dark;
+    }
+  }
+
+  &__arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    left: 1.5rem;
+
+    .active & {
+      display: block;
+    }
+
+    path {
+      fill: $c-purple;
+    }
+  }
+
+  &__open-icon {
+    width: 0.82rem;
+    height: 0.92rem;
+  }
+
+  &__icon {
+    width: 2.9rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  &__capabilities {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+}

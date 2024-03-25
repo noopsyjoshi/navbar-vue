@@ -20,11 +20,20 @@
     top: 10.2rem;
     left: 0;
     width: 100%;
-    padding: 1.8rem;
     @include flex-pos(flex-start, space-between);
     flex-direction: column;
     min-height: calc(100vh - 10.2rem);
     display: none;
+    height: 100%;
+    overflow-y: auto;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      background-color: $c-white;
+      min-height: unset;
+      position: unset;
+      flex-direction: row;
+    }
 
     &.open {
       display: flex;
@@ -37,7 +46,7 @@
   }
 
   &__toggles {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
@@ -65,22 +74,34 @@
     }
   }
 
+  &__primary,
+  &__secondary {
+    width: 100%;
+  }
+
   &__primary {
     position: relative;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      @include flex-pos(center, center);
+    }
   }
 
   &__secondary {
     display: none;
+    background-color: $c-grey-light;
+    padding-right: 1.8rem;
+    padding-left: 3.4rem;
+    padding-right: 3.4rem;
+    overflow-y: auto;
+
+    &.is-active {
+      display: block;
+    }
   }
 
   &__item {
-    list-style: none;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 0.1rem solid $c-teal-light;
+    width: 100%;
 
     > button {
       @include reset-button;
@@ -91,15 +112,43 @@
     }
   }
 
+  &__secondary-item {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 0.1rem solid $c-grey-medium;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
   &__link {
-    font-family: 'founders-grotesk-medium';
-    font-size: 2.4rem;
+    background-color: $c-teal;
     color: $c-white;
-    text-decoration: none;
     letter-spacing: 0.04rem;
+    font-size: 2.4rem;
+    padding: 1.8rem 1.5rem;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-bottom: 0.1rem solid $c-teal-light;
+
+    &.is-active {
+      background-color: $c-grey-light;
+      border: none;
+      color: $c-black;
+    }
+  }
+
+  &__link,
+  &__secondary-link {
+    text-decoration: none;
+    font-family: 'founders-grotesk-medium';
   }
 
   &__button {
     margin-top: auto;
+    margin-left: 1.8rem;
+    margin-bottom: 1.8rem;
   }
 }

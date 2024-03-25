@@ -11,15 +11,20 @@
             {
               "title": "The Complete Restaurant Experience Monitoring Solution",
               "body": "Review all Guest experience feedback across all social, review, and survey channels including in-store or off-premises channels.",
-              "mainLinks": [
+              "links": [
                 {
-                  "iconUrl": "/",
-                  "iconAlt": " ",
-                  "text": "Survey"
+                  "icon": {
+                    "url": "src/assets/icons/survey.svg",
+                    "alt": "Survey icon"
+                  },
+                  "text": "Survey",
+                  "url": "/survey"
                 },
                 {
-                  "iconUrl": "/",
-                  "iconAlt": " ",
+                  "icon": {
+                    "url": "src/assets/icons/social-listening.svg",
+                    "alt": "Social listening icon"
+                  },
                   "text": "Social Listening"
                 }
               ],
@@ -53,13 +58,132 @@
           ]
         },
         {
-          "text": "Brand Reputation Management"
+          "text": "Brand Reputation Management",
+          "navContent": [
+            {
+              "title": "Reputation Management for Restaruant Chains",
+              "body": "Monitor, respond to, and promote your guest word-of-mouth",
+              "links": [
+                {
+                  "icon": {
+                    "url": "src/assets/icons/review-management.svg",
+                    "alt": "Review management icon"
+                  },
+                  "text": "Review Management",
+                  "url": "/management"
+                }
+              ],
+              "capabilities": [
+                {
+                  "text": "Unified Review Inbox"
+                },
+                {
+                  "text": "Real-Time Alerts"
+                },
+                {
+                  "text": "Response Templates"
+                },
+                {
+                  "text": "Review Promotions"
+                }
+              ]
+            }
+          ]
         },
         {
-          "text": "Market Intelligence"
+          "text": "Market Intelligence",
+          "navContent": [
+            {
+              "title": "Restaurant Industry Benchmark Insights",
+              "body": "Benchmark performance to local, regional, and national peers",
+              "links": [
+                {
+                  "icon": {
+                    "url": "src/assets/icons/staffing.svg",
+                    "alt": "Staffing icon"
+                  },
+                  "text": "Staffing & Compensation Benchmarks"
+                },
+                {
+                  "icon": {
+                    "url": "src/assets/icons/sales.svg",
+                    "alt": "Sales icon"
+                  },
+                  "text": "Sales & Traffic Benchmarks"
+                }
+              ],
+              "capabilities": [
+                {
+                  "text": "Local Hiring"
+                },
+                {
+                  "text": "Team Training"
+                },
+                {
+                  "text": "Turnover Insights"
+                },
+                {
+                  "text": "Staff Productivity"
+                },
+                {
+                  "text": "Customer Trends"
+                },
+                {
+                  "text": "New Market Entrants"
+                },
+                {
+                  "text": "Guest Behavior"
+                },
+                {
+                  "text": "Competitor Insights"
+                }
+              ]
+            }
+          ]
         },
         {
-          "text": "Hospitality AI"
+          "text": "Hospitality AI",
+          "navContent": [
+            {
+              "title": "Data-driven insights to grow sales",
+              "body": "Instantly spot areas of improvement and exceed guests’ expectations for both new and returning customers.",
+              "links": [
+                {
+                  "icon": {
+                    "url": "src/assets/icons/insights.svg",
+                    "alt": "Insights icon"
+                  },
+                  "text": "Actionable Insights"
+                }
+              ],
+              "capabilities": [
+                {
+                  "text": "Survey & Form Management"
+                },
+                {
+                  "text": "Delivery Service Satisfaction"
+                },
+                {
+                  "text": "Net-Promoted Score (NPS)"
+                },
+                {
+                  "text": "Customer Satisfaction (CSAT)"
+                },
+                {
+                  "text": "Customer Effort (CES)"
+                },
+                {
+                  "text": "Customer Sentiment"
+                },
+                {
+                  "text": "Natural Language Processing"
+                },
+                {
+                  "text": "Social & Review Site Coverage"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
