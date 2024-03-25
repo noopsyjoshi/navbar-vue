@@ -7,11 +7,21 @@
   top: 0;
   left: 0;
   @include flex-pos(center, flex-start);
+  background-color: $c-white;
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 
   &__wrapper {
     @include flex-pos(center, space-between);
     height: 100%;
     width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      justify-content: center;
+    }
   }
 
   &__menu {
@@ -24,19 +34,35 @@
     flex-direction: column;
     min-height: calc(100vh - 10.2rem);
     display: none;
-    height: 100%;
     overflow-y: auto;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
+      width: 60vw;
+      right: 0;
+      left: unset;
+    }
+
+    @include media-breakpoint-up(xl) {
       display: flex;
       background-color: $c-white;
       min-height: unset;
       position: unset;
       flex-direction: row;
+      width: unset;
     }
 
     &.open {
       display: flex;
+    }
+  }
+
+  &__logo-wrapper {
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 4rem;
+      display: block;
     }
   }
 
@@ -46,7 +72,7 @@
   }
 
   &__toggles {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: none;
     }
   }
@@ -77,13 +103,19 @@
   &__primary,
   &__secondary {
     width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      width: auto;
+    }
   }
 
   &__primary {
     position: relative;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       @include flex-pos(center, center);
+      gap: 4rem;
+      position: unset;
     }
   }
 
@@ -95,6 +127,18 @@
     padding-right: 3.4rem;
     overflow-y: auto;
 
+    @include media-breakpoint-up(xl) {
+      display: block;
+      width: 100%;
+      position: absolute;
+      min-height: calc(100vh - 10.2rem);
+      left: 0;
+      top: 10.2rem;
+      padding-top: 8.2rem;
+      padding-left: 6.6rem;
+      background-color: $c-teal;
+    }
+
     &.is-active {
       display: block;
     }
@@ -102,6 +146,10 @@
 
   &__item {
     width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      width: fit-content;
+    }
 
     > button {
       @include reset-button;
@@ -120,6 +168,12 @@
     &:last-of-type {
       border-bottom: none;
     }
+
+    @include media-breakpoint-up(xl) {
+      border-bottom: none;
+      padding: 0;
+      margin-bottom: 3.4rem;
+    }
   }
 
   &__link {
@@ -133,10 +187,39 @@
     display: block;
     border-bottom: 0.1rem solid $c-teal-light;
 
+    @include media-breakpoint-up(xl) {
+      background-color: transparent;
+      color: $c-grey-dark;
+      border-bottom: none;
+      padding: 0;
+      font-size: 1.8rem;
+      @include flex-pos(center, flex-start);
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $c-purple;
+      }
+    }
+
     &.is-active {
       background-color: $c-grey-light;
       border: none;
       color: $c-black;
+
+      @include media-breakpoint-up(xl) {
+        background-color: unset;
+      }
+    }
+  }
+
+  &__chevron {
+    width: 1.2rem;
+    height: 0.7rem;
+    margin-left: 1rem;
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+      display: block;
     }
   }
 
@@ -150,5 +233,13 @@
     margin-top: auto;
     margin-left: 1.8rem;
     margin-bottom: 1.8rem;
+
+    @include media-breakpoint-up(xl) {
+      margin: 0;
+      position: absolute;
+      right: 4rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }

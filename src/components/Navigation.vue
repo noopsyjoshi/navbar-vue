@@ -2,7 +2,7 @@
   <nav class="navigation">
     <div class="navigation__wrapper">
       <!-- Logo -->
-      <router-link to="/">
+      <router-link class="navigation__logo-wrapper" to="/">
         <Logo class="navigation__logo" alt="GuestXM Logo" />
       </router-link>
 
@@ -37,13 +37,18 @@
               class="navigation__link"
             >
               {{ primaryItem.text }}
+              <Chevron class="navigation__chevron" alt="Down arrow" />
             </a>
 
             <router-link v-else to="" class="navigation__link">
               {{ primaryItem.text }}
             </router-link>
 
-            <div :class="this.showSecondaryNav ? 'is-active' : ''" class="navigation__secondary">
+            <div
+              v-if="primaryItem.navSecondaryItems"
+              :class="this.showSecondaryNav ? 'is-active' : ''"
+              class="navigation__secondary"
+            >
               <ul>
                 <li
                   class="navigation__secondary-item"
@@ -107,6 +112,7 @@ import Hamburger from '@/assets/icons/hamburger.svg'
 import Close from '@/assets/icons/close.svg'
 import Arrow from '@/assets/icons/arrow.svg'
 import Open from '@/assets/icons/open.svg'
+import Chevron from '@/assets/icons/chevron.svg'
 import navigationData from '/public/data/navigation.json'
 
 export default {
@@ -115,7 +121,8 @@ export default {
     Hamburger,
     Close,
     Arrow,
-    Open
+    Open,
+    Chevron
   },
 
   data() {
