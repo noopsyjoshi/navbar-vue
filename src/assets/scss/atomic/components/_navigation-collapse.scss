@@ -11,13 +11,13 @@
     font-family: 'founders-grotesk-medium';
     font-size: 2rem;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       color: $c-white;
     }
   }
 
   &__block {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       height: 100%;
@@ -39,7 +39,7 @@
   &__content {
     padding-top: 1.8rem;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       background-color: $c-grey-light;
       height: 100%;
       top: 0;
@@ -57,7 +57,7 @@
       font-size: 1.6rem;
       margin-bottom: 0.5rem;
 
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(lg) {
         font-size: 2.6rem;
         margin-bottom: 2rem;
       }
@@ -68,7 +68,7 @@
       line-height: 1.2;
       font-family: 'founders-grotesk-regular';
 
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(lg) {
         max-width: 82%;
       }
     }
@@ -78,7 +78,7 @@
     @include flex-pos(center, flex-start);
     margin-top: 1.2rem;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       margin-top: 1.4rem;
     }
 
@@ -109,7 +109,7 @@
       fill: $c-purple;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       left: 4rem;
 
       path {
@@ -132,17 +132,16 @@
   &__capabilities {
     display: none;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
-      margin-top: 1.8rem;
 
       h4 {
         font-family: 'founders-grotesk-medium';
         font-size: 1.2rem;
         text-transform: uppercase;
-        margin-bottom: 1rem;
+        margin-bottom: 1.4rem;
       }
 
       span {
@@ -154,7 +153,7 @@
   &__article {
     display: none;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: block;
     }
 
@@ -168,8 +167,9 @@
 
     img {
       @include object-fit;
-      width: 21rem;
+      width: 100%;
       height: auto;
+      aspect-ratio: 1.76;
       margin-bottom: 1rem;
     }
   }

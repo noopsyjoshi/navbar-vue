@@ -9,7 +9,7 @@
   @include flex-pos(center, flex-start);
   background-color: $c-white;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -19,7 +19,7 @@
     height: 100%;
     width: 100%;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       justify-content: center;
     }
   }
@@ -42,7 +42,7 @@
       left: unset;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: flex;
       background-color: $c-white;
       min-height: unset;
@@ -58,7 +58,7 @@
   }
 
   &__logo-wrapper {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -73,7 +73,7 @@
   }
 
   &__toggles {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
@@ -105,7 +105,7 @@
   &__secondary {
     width: 100%;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       width: auto;
     }
   }
@@ -113,7 +113,7 @@
   &__primary {
     position: relative;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       @include flex-pos(center, center);
       gap: 4rem;
       position: unset;
@@ -128,7 +128,7 @@
     padding-right: 3.4rem;
     overflow-y: auto;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       width: 100%;
       position: absolute;
       // min-height: calc(100vh - 10.2rem);
@@ -147,7 +147,7 @@
   &__item {
     width: 100%;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       width: fit-content;
       height: 100%;
     }
@@ -170,7 +170,7 @@
       border-bottom: none;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       border-bottom: none;
       padding: 0;
       margin-bottom: 3.4rem;
@@ -188,7 +188,7 @@
     display: block;
     border-bottom: 0.1rem solid $c-teal-light;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       background-color: transparent;
       color: $c-grey-dark;
       border-bottom: none;
@@ -207,7 +207,7 @@
       border: none;
       color: $c-black;
 
-      @include media-breakpoint-up(xl) {
+      @include media-breakpoint-up(lg) {
         background-color: unset;
       }
     }
@@ -219,7 +219,7 @@
     margin-left: 1rem;
     display: none;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: block;
     }
 
@@ -243,7 +243,7 @@
     margin-left: 1.8rem;
     margin-bottom: 1.8rem;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       margin: 0;
       position: absolute;
       right: 4rem;
