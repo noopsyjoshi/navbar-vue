@@ -53,7 +53,15 @@
                 {
                   "text": "Social & Review Site Coverage"
                 }
-              ]
+              ],
+              "article": {
+                "link": "/",
+                "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
+                "image": {
+                  "url": "src/assets/images/restaurant.jpg",
+                  "alt": "Restaurant"
+                }
+              }
             }
           ]
         },
@@ -86,7 +94,15 @@
                 {
                   "text": "Review Promotions"
                 }
-              ]
+              ],
+              "article": {
+                "link": "/",
+                "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
+                "image": {
+                  "url": "src/assets/images/restaurant.jpg",
+                  "alt": "Restaurant"
+                }
+              }
             }
           ]
         },
@@ -137,7 +153,15 @@
                 {
                   "text": "Competitor Insights"
                 }
-              ]
+              ],
+              "article": {
+                "link": "/",
+                "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
+                "image": {
+                  "url": "src/assets/images/restaurant.jpg",
+                  "alt": "Restaurant"
+                }
+              }
             }
           ]
         },
@@ -181,7 +205,15 @@
                 {
                   "text": "Social & Review Site Coverage"
                 }
-              ]
+              ],
+              "article": {
+                "link": "/",
+                "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
+                "image": {
+                  "url": "src/assets/images/restaurant.jpg",
+                  "alt": "Restaurant"
+                }
+              }
             }
           ]
         }

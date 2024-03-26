@@ -1,23 +1,36 @@
 // TODO: Update fonts for Header
 
 @mixin h1 {
-  font-family: 'founders-grotesk-regular';
+  font-family: 'founders-grotesk-medium';
 }
 
 @mixin h2 {
-  font-family: 'founders-grotesk-regular';
+  font-family: 'founders-grotesk-medium';
 }
 
 @mixin h3 {
-  font-family: 'founders-grotesk-regular';
+  font-family: 'founders-grotesk-medium';
 }
 
 @mixin h4 {
-  font-family: 'founders-grotesk-regular';
+  font-size: 1.2rem;
+  line-height: 1;
+  font-family: 'founders-grotesk-medium';
 }
 
 @mixin text--body {
   font-family: 'founders-grotesk-regular';
+  font-size: 1.4rem;
+}
+
+@mixin text--small {
+  font-family: 'founders-grotesk-regular';
+  font-size: 1.4rem;
+}
+
+@mixin text--x-small {
+  font-family: 'founders-grotesk-regular';
+  font-size: 1.2rem;
 }
 
 h1,

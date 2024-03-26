@@ -46,6 +46,7 @@
       display: flex;
       background-color: $c-white;
       min-height: unset;
+      height: 100%;
       position: unset;
       flex-direction: row;
       width: unset;
@@ -116,26 +117,25 @@
       @include flex-pos(center, center);
       gap: 4rem;
       position: unset;
+      height: 100%;
     }
   }
 
   &__secondary {
     display: none;
     background-color: $c-grey-light;
-    padding-right: 1.8rem;
     padding-left: 3.4rem;
     padding-right: 3.4rem;
     overflow-y: auto;
 
     @include media-breakpoint-up(xl) {
-      display: block;
       width: 100%;
       position: absolute;
-      min-height: calc(100vh - 10.2rem);
+      // min-height: calc(100vh - 10.2rem);
+      min-height: 50.8rem;
       left: 0;
       top: 10.2rem;
-      padding-top: 8.2rem;
-      padding-left: 6.6rem;
+      padding: 8.2rem 6.6rem 6.4rem;
       background-color: $c-teal;
     }
 
@@ -149,6 +149,7 @@
 
     @include media-breakpoint-up(xl) {
       width: fit-content;
+      height: 100%;
     }
 
     > button {
@@ -220,6 +221,14 @@
 
     @include media-breakpoint-up(xl) {
       display: block;
+    }
+
+    .is-active & {
+      transform: scaleY(-1);
+
+      path {
+        stroke: $c-purple;
+      }
     }
   }
 

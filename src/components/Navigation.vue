@@ -62,10 +62,11 @@
                     </div>
                     <div
                       v-show="activeIndex === index"
-                      v-if="secondaryItem.navContent"
                       class="navigation-collapse__content"
+                      v-for="content in secondaryItem.navContent"
+                      :key="content.text"
                     >
-                      <div v-for="content in secondaryItem.navContent" :key="content.text">
+                      <div class="navigation-collapse__block navigation-collapse__block--50">
                         <h3>{{ content.title }}</h3>
                         <p>{{ content.body }}</p>
                         <div
@@ -83,11 +84,29 @@
                             <Open class="navigation-collapse__open-icon" />
                           </router-link>
                         </div>
+                      </div>
+                      <div
+                        class="navigation-collapse__block navigation-collapse__block--25"
+                        v-if="content.capabilities"
+                      >
                         <div class="navigation-collapse__capabilities">
                           <h4>Platform Capabilities</h4>
                           <span v-for="capability in content.capabilities" :key="capability.text">
                             {{ capability.text }}
                           </span>
+                        </div>
+                      </div>
+                      <div
+                        class="navigation-collapse__block navigation-collapse__block--25"
+                        v-if="content.article"
+                      >
+                        <div class="navigation-collapse__article">
+                          <img
+                            class="navigation-collapse__image"
+                            :src="content.article.image.url"
+                            :alt="content.article.image.alt"
+                          />
+                          <h4>{{ content.article.text }}</h4>
                         </div>
                       </div>
                     </div>

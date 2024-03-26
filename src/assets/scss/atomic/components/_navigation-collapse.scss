@@ -16,6 +16,26 @@
     }
   }
 
+  &__block {
+    @include media-breakpoint-up(xl) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      height: 100%;
+
+      &--50 {
+        width: 50%;
+      }
+
+      &--25 {
+        width: 25%;
+      }
+
+      &:not(:last-of-type) {
+        border-right: 0.1rem solid $c-grey-medium;
+      }
+    }
+  }
+
   &__content {
     padding-top: 1.8rem;
 
@@ -26,6 +46,9 @@
       right: 0;
       position: absolute;
       width: 68vw;
+      padding-top: 8.2rem;
+      padding-bottom: 6.4rem;
+      @include flex-pos(flex-start, flex-start);
     }
 
     // RTE
@@ -44,12 +67,20 @@
       font-size: 1.4rem;
       line-height: 1.2;
       font-family: 'founders-grotesk-regular';
+
+      @include media-breakpoint-up(xl) {
+        max-width: 82%;
+      }
     }
   }
 
   &__link {
     @include flex-pos(center, flex-start);
     margin-top: 1.2rem;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 1.4rem;
+    }
 
     span {
       font-size: 1.4rem;
@@ -101,8 +132,45 @@
   &__capabilities {
     display: none;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 1.8rem;
+
+      h4 {
+        font-family: 'founders-grotesk-medium';
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      span {
+        @include text--x-small;
+      }
+    }
+  }
+
+  &__article {
+    display: none;
+
+    @include media-breakpoint-up(xl) {
       display: block;
+    }
+
+    // RTE
+    h4 {
+      // Add more heading / p styles if user can select style in the CMS
+      font-size: 1.1rem;
+      font-family: 'founders-grotesk-medium';
+      line-height: 1.5rem;
+    }
+
+    img {
+      @include object-fit;
+      width: 21rem;
+      height: auto;
+      margin-bottom: 1rem;
     }
   }
 }
