@@ -157,6 +157,11 @@
       display: block;
     }
 
+    a {
+      text-decoration: none;
+      color: $c-grey-dark;
+    }
+
     // RTE
     h4 {
       // Add more heading / p styles if user can select style in the CMS

@@ -20,6 +20,7 @@
       </div>
 
       <div class="navigation__menu" :class="this.showMobileMenu ? 'open' : ''">
+        <!-- Platform, Resources, About, Login -->
         <ul class="navigation__primary">
           <li
             class="navigation__item"
@@ -55,67 +56,20 @@
                   v-for="(secondaryItem, index) in primaryItem.navSecondaryItems"
                   :key="secondaryItem.text"
                 >
-                  <div class="navigation-collapse" :class="{ active: activeIndex === index }">
-                    <div class="navigation-collapse__header" @click="toggleAccordion(index)">
-                      <Arrow class="navigation-collapse__arrow" />
-                      <h3 class="navigation-collapse__title">{{ secondaryItem.text }}</h3>
-                    </div>
-                    <div
-                      v-show="activeIndex === index"
-                      class="navigation-collapse__content"
-                      v-for="content in secondaryItem.navContent"
-                      :key="content.text"
-                    >
-                      <div class="navigation-collapse__block navigation-collapse__block--50">
-                        <h3>{{ content.title }}</h3>
-                        <p>{{ content.body }}</p>
-                        <div
-                          class="navigation-collapse__link"
-                          v-for="link in content.links"
-                          :key="link.text"
-                        >
-                          <router-link to="link.url">
-                            <img
-                              class="navigation-collapse__icon"
-                              :src="link.icon.url"
-                              :alt="link.icon.alt"
-                            />
-                            <span>{{ link.text }}</span>
-                            <Open class="navigation-collapse__open-icon" />
-                          </router-link>
-                        </div>
-                      </div>
-                      <div
-                        class="navigation-collapse__block navigation-collapse__block--25"
-                        v-if="content.capabilities"
-                      >
-                        <div class="navigation-collapse__capabilities">
-                          <h4>Platform Capabilities</h4>
-                          <span v-for="capability in content.capabilities" :key="capability.text">
-                            {{ capability.text }}
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        class="navigation-collapse__block navigation-collapse__block--25"
-                        v-if="content.article"
-                      >
-                        <div class="navigation-collapse__article">
-                          <img
-                            class="navigation-collapse__image"
-                            :src="content.article.image.url"
-                            :alt="content.article.image.alt"
-                          />
-                          <h4>{{ content.article.text }}</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <NavigationMenu
+                    :secondaryItem="secondaryItem"
+                    :isMobile="isMobile"
+                    :index="index"
+                    :activeIndex="activeIndex"
+                    @toggle-accordion="toggleAccordion"
+                  />
                 </li>
               </ul>
             </div>
           </li>
         </ul>
+
+        <!-- TODO: Move login to end of Nav -->
 
         <router-link to="/" type="button" class="button navigation__button">
           Book a demo
@@ -126,46 +80,50 @@
 </template>
 
 <script>
+import NavigationMenu from './NavigationMenu.vue'
 import Logo from '@/assets/icons/logo.svg'
 import Hamburger from '@/assets/icons/hamburger.svg'
 import Close from '@/assets/icons/close.svg'
-import Arrow from '@/assets/icons/arrow.svg'
-import Open from '@/assets/icons/open.svg'
 import Chevron from '@/assets/icons/chevron.svg'
 import navigationData from '/public/data/navigation.json'
 
 export default {
   components: {
+    NavigationMenu,
     Logo,
     Hamburger,
     Close,
-    Arrow,
-    Open,
     Chevron
   },
 
   data() {
     return {
+      isMobile: false,
       showMobileMenu: false,
       navPrimaryItems: navigationData.navPrimaryItems,
       showSecondaryNav: false,
-      expandedMenuSection: null,
       activeIndex: 0
     }
   },
 
+  created() {
+    if (window.innerWidth < 992) {
+      this.isMobile = true
+    }
+  },
+
   mounted() {
-    console.log('data', this.navPrimaryItems)
+    // console.log('data', this.navPrimaryItems)
+    window.addEventListener('resize', this.handleResize)
   },
 
   methods: {
     toggleMenu() {
       this.showMobileMenu = !this.showMobileMenu
 
-      // TODO: Move to watch?!
-      this.showMobileMenu === true
-        ? document.querySelector('body').classList.add('overflow')
-        : document.querySelector('body').classList.remove('overflow')
+      if (window.innerWidth < 992) {
+        document.body.classList.toggle('overflow', this.showMobileMenu)
+      }
     },
 
     toggleSecondaryNav() {
@@ -173,9 +131,20 @@ export default {
     },
 
     toggleAccordion(index) {
-      console.log(this.activeIndex, index)
+      this.activeIndex = index
+    },
 
-      this.activeIndex = this.activeIndex === index ? -1 : index
+    handleResize() {
+      if (window.innerWidth >= 992) {
+        // Remove overflow class from body and close mobile menu on desktop
+        if (document.body.classList.contains('overflow')) {
+          document.body.classList.remove('overflow')
+        }
+        this.showMobileMenu = false
+        this.isMobile = false
+      } else {
+        this.isMobile = true
+      }
     }
   }
 }

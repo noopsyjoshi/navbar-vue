@@ -122,21 +122,35 @@
   }
 
   &__secondary {
-    display: none;
+    // display: none;
     background-color: $c-grey-light;
     padding-left: 3.4rem;
     padding-right: 3.4rem;
     overflow-y: auto;
 
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
     @include media-breakpoint-up(lg) {
       width: 100%;
       position: absolute;
-      // min-height: calc(100vh - 10.2rem);
       min-height: 50.8rem;
       left: 0;
       top: 10.2rem;
       padding: 8.2rem 6.6rem 6.4rem;
       background-color: $c-teal;
+      visibility: hidden;
+      opacity: 0;
+      transition:
+        visibility 0.2s ease,
+        opacity 0.2s ease;
+
+      &:hover {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     &.is-active {
@@ -199,6 +213,20 @@
 
       &:hover {
         color: $c-purple;
+
+        .navigation__chevron {
+          transform: scaleY(-1);
+
+          path {
+            stroke: $c-purple;
+          }
+        }
+
+        ~ .navigation__secondary {
+          //   display: block;
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
 

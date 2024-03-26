@@ -25,7 +25,8 @@
                     "url": "src/assets/icons/social-listening.svg",
                     "alt": "Social listening icon"
                   },
-                  "text": "Social Listening"
+                  "text": "Social Listening",
+                  "url": "/social-listening"
                 }
               ],
               "capabilities": [
@@ -55,7 +56,7 @@
                 }
               ],
               "article": {
-                "link": "/",
+                "link": "/restaurant",
                 "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
                 "image": {
                   "url": "src/assets/images/restaurant.jpg",
@@ -96,7 +97,7 @@
                 }
               ],
               "article": {
-                "link": "/",
+                "link": "/restaurant",
                 "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
                 "image": {
                   "url": "src/assets/images/restaurant.jpg",
@@ -118,14 +119,16 @@
                     "url": "src/assets/icons/staffing.svg",
                     "alt": "Staffing icon"
                   },
-                  "text": "Staffing & Compensation Benchmarks"
+                  "text": "Staffing & Compensation Benchmarks",
+                  "url": "/staffing"
                 },
                 {
                   "icon": {
                     "url": "src/assets/icons/sales.svg",
                     "alt": "Sales icon"
                   },
-                  "text": "Sales & Traffic Benchmarks"
+                  "text": "Sales & Traffic Benchmarks",
+                  "url": "/sales"
                 }
               ],
               "capabilities": [
@@ -155,7 +158,7 @@
                 }
               ],
               "article": {
-                "link": "/",
+                "link": "/restaurant",
                 "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
                 "image": {
                   "url": "src/assets/images/restaurant.jpg",
@@ -177,7 +180,8 @@
                     "url": "src/assets/icons/insights.svg",
                     "alt": "Insights icon"
                   },
-                  "text": "Actionable Insights"
+                  "text": "Actionable Insights",
+                  "url": "/insights"
                 }
               ],
               "capabilities": [
@@ -207,7 +211,7 @@
                 }
               ],
               "article": {
-                "link": "/",
+                "link": "/restaurant",
                 "text": "Restaurant Sales Growth Weakest Since Last Summer as Guest Check Growth Falls",
                 "image": {
                   "url": "src/assets/images/restaurant.jpg",
